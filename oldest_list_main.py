@@ -14,11 +14,15 @@ while True:
     except:
         print("Error! Please input again.")
 
-print(name)
-print(age)
-
 # Array to put the data in
-# Add another entry
+entries[name] = {
+    "name" : name,
+    "age" : age
+}
+
+# Add another entry. Also added the .lower() to check whether capitalized or not
+another = (input("Add another entry? (Yes/No): ")).lower()
+
 # Assume that the first entry is the oldest
 # Add a function that compares a new entry to the oldest entry
 # Print the oldest person in the list after it checks to see who is the oldest in the list
