@@ -45,7 +45,7 @@ while True:
 def oldest(entries):
     oldest_entry = entries[0]
 
-# Add a function that compares a new entry to the oldest entry
+# Add a function for the def that compares a new entry to the oldest entry
 
     # This function assigns the current entry in the list as new_age for the list entries[]
     for new_age in entries:
@@ -56,3 +56,8 @@ def oldest(entries):
     return oldest_entry
 
 # Print the oldest person in the list after it checks to see who is the oldest in the list
+# This checks the entries list if not empty
+if entries:
+    # This assigns oldest entry found in the list as oldest_entry
+    oldest_entry = oldest(entries)
+    print(f'The oldest person is {oldest_entry["name"]} with an age of {oldest_entry["age"]}')
