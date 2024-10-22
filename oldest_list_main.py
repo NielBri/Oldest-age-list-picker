@@ -2,7 +2,10 @@
 entries = []
 
 # Name input
+name = input("Please input name: ")
 # Age input
+age = int(input("Please input age: "))
+
 # Array to put the data in
 # Add another entry
 # Assume that the first entry is the oldest
