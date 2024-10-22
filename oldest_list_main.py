@@ -15,10 +15,10 @@ while True:
         print("Error! Please input again.")
 
 # Array to put the data in
-entries[name] = {
-    "name" : name,
-    "age" : age
-}
+entries.append({
+        "name" : name,
+        "age" : age
+    })
 
 # Add another entry. Also added the .lower() to check whether capitalized or not
 another = (input("Add another entry? (Yes/No): ")).lower()
