@@ -1,18 +1,28 @@
+import re
+
 # Make a list
 entries = []
 
 # Loop 2 checks if the user wants to input another entry
 while True:
-    # Name input
-    name = input("Please input name: ")
+    # Loop 4 is for checking if the name is only text
+    while True:
+        name = input("Please input name: ")
+        if re.match(r"^[a-zA-Z .]+$", name):
+            break
+        else:
+            print("Error! Invalid name.")
+
 
     # Loop 1 checks if the age is an integer and anything else will result into another input
     while True:
         # Age input
         try:
             age = int(input("Please input age: "))
-            # This breaks Loop 1
-            break
+            if 0 < age <= 120:
+                break
+            else:
+                print("Error! Please input a valid age range (1-120)")
         except:
             print("Error! Please input again.")
 
@@ -62,3 +72,7 @@ if entries:
     # This assigns oldest entry found in the list as oldest_entry
     oldest_entry = oldest(entries)
     print(f'The oldest person is {oldest_entry["name"]} with an age of {oldest_entry["age"]}')
+
+
+
+# Fix the last print wherein if two or more people have the same highest age it should print all the people with it
