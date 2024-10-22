@@ -25,7 +25,18 @@ while True:
     # Add another entry. Also added the .lower() to check whether capitalized or not
     another = (input("Add another entry? (Yes/No): ")).lower()
 
-    # This function checks if the user inputs no
+    # Loop 3 checks only if the input is yes or no
+    while True:
+        if another == "yes":
+            # This breaks Loop 3 and allows the user to put another entry
+            break
+        elif another == "no":
+            # This also breaks Loop 3 and goes to the Loop 2 break
+            break
+        else:
+            print("Error! Please input again.")
+
+    # This checks the input if no like in Loop 3 and continues to break Loop 2
     if another == "no":
         # Breaks Loop 2
         break
