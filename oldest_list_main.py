@@ -22,11 +22,12 @@ while True:
             "age" : age
         })
 
-    # Add another entry. Also added the .lower() to check whether capitalized or not
-    another = (input("Add another entry? (Yes/No): ")).lower()
-
     # Loop 3 checks only if the input is yes or no
     while True:
+
+        # Add another entry. Also added the .lower() to check whether capitalized or not
+        another = (input("Add another entry? (Yes/No): ")).lower()
+
         if another == "yes":
             # This breaks Loop 3 and allows the user to put another entry
             break
