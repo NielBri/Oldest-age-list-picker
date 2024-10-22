@@ -3,8 +3,19 @@ entries = []
 
 # Name input
 name = input("Please input name: ")
-# Age input
-age = int(input("Please input age: "))
+
+# Loop 1 checks if the age is an integer and anything else will result into another input
+while True:
+    # Age input
+    try:
+        age = int(input("Please input age: "))
+        # This breaks Loop 1
+        break
+    except:
+        print("Error! Please input again.")
+
+print(name)
+print(age)
 
 # Array to put the data in
 # Add another entry
