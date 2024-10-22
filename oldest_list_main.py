@@ -1,27 +1,34 @@
 # Make a list
 entries = []
 
-# Name input
-name = input("Please input name: ")
-
-# Loop 1 checks if the age is an integer and anything else will result into another input
+# Loop 2 checks if the user wants to input another entry
 while True:
-    # Age input
-    try:
-        age = int(input("Please input age: "))
-        # This breaks Loop 1
+    # Name input
+    name = input("Please input name: ")
+
+    # Loop 1 checks if the age is an integer and anything else will result into another input
+    while True:
+        # Age input
+        try:
+            age = int(input("Please input age: "))
+            # This breaks Loop 1
+            break
+        except:
+            print("Error! Please input again.")
+
+    # Array to put the data in
+    entries.append({
+            "name" : name,
+            "age" : age
+        })
+
+    # Add another entry. Also added the .lower() to check whether capitalized or not
+    another = (input("Add another entry? (Yes/No): ")).lower()
+
+    # This function checks if the user inputs no
+    if another == "no":
+        # Breaks Loop 2
         break
-    except:
-        print("Error! Please input again.")
-
-# Array to put the data in
-entries.append({
-        "name" : name,
-        "age" : age
-    })
-
-# Add another entry. Also added the .lower() to check whether capitalized or not
-another = (input("Add another entry? (Yes/No): ")).lower()
 
 # Assume that the first entry is the oldest
 # Add a function that compares a new entry to the oldest entry
