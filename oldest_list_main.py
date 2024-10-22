@@ -42,5 +42,7 @@ while True:
         break
 
 # Assume that the first entry is the oldest
+def oldest(entries):
+    oldest_entry = entries[0]
 # Add a function that compares a new entry to the oldest entry
 # Print the oldest person in the list after it checks to see who is the oldest in the list
