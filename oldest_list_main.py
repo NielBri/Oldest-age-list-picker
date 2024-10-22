@@ -1,4 +1,6 @@
 # Make a list
+entries = []
+
 # Name input
 # Age input
 # Array to put the data in
